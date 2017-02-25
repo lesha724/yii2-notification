@@ -36,9 +36,7 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
 <?php 
-    $prefix = 'bootstrap';//default ''
-    
-    Yii::$app->session->setFlash($prefix . 'success', 'This is the message');
+    Yii::$app->session->setFlash('success', 'This is the message');
 ?>
 ```
 
@@ -69,6 +67,5 @@ Once the extension is installed, simply use it in your code by  :
             ],
         ],
         'closeButton'=>[],
-        'prefix'=>$prefix
 ]); ?>
 ```

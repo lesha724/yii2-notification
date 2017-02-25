@@ -46,11 +46,6 @@ class BootstrapAlert extends Widget
      */
     public $closeButton = [];
     /**
-     * @var string prefix for type of flash messages
-     */
-    public $prefix = '';
-
-    /**
      * @var boolean whether to removed flash messages during AJAX requests
      */
     public $isAjaxRemoveFlash = true;
@@ -69,7 +64,7 @@ class BootstrapAlert extends Widget
         $appendCss = isset($this->options['class']) ? ' ' . $this->options['class'] : '';
 
         foreach ($flashes as $type => $data) {
-            if (isset($this->alertTypes[$this->prefix . $type])) {
+            if (isset($this->alertTypes[$type])) {
                 $data = (array) $data;
                 foreach ($data as $message) {
 
