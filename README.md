@@ -32,6 +32,7 @@ Once the extension is installed, simply use it in your code by  :
 
 **Bootstrap Alerts**
 
+_Fork from [dmstr\widgets\Alert](https://github.com/dmstr/yii2-adminlte-asset/blob/master/widgets/Alert.php)_
 1) Set the message in your action, for example:
 
 ```php
