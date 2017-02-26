@@ -1,5 +1,4 @@
 <?php
-
 namespace lesha724\Notification\widgets;
 
 
@@ -68,5 +67,6 @@ class SweetAlert extends AlertsWidget
         echo SimpleSweetAlert::widget([
             'options'=>$options
         ]);
+
     }
 }

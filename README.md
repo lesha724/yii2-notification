@@ -73,6 +73,7 @@ SweetAlerts
 ---
 
 **Widget for flash messages**
+
 1) Set the message in your action, for example:
 
 ```php
@@ -151,3 +152,4 @@ JS;
                 ]
         ]) ?>
 ```
+
