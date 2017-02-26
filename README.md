@@ -25,49 +25,97 @@ or add
 to the require section of your `composer.json` file.
 
 
-Usage
+
+Bootstrap Alerts
 -----
 
 Once the extension is installed, simply use it in your code by  :
 
-**Bootstrap Alerts**
-
-*Fork from [dmstr\widgets\Alert](https://github.com/dmstr/yii2-adminlte-asset/blob/master/widgets/Alert.php)*
-
 1) Set the message in your action, for example:
 
 ```php
-<?php 
-    Yii::$app->session->setFlash('success', 'This is the message');
+<?php  
+    Yii::$app->session->setFlash('bootstrap-success', 'This is the message');
 ?>
 ```
 
 2) Simply add widget to your page as follows:
 
 ```php
-<?= \lesha724\Notification\BootstrapAlert::widget([
+<?= \lesha724\Notification\widgets\BootstrapAlert::widget([
         'alertTypes' => [
-            'error' => [
+            'bootstrap-error' => [
                 'class' => 'alert-danger',
                 'icon' => '<i class="icon glyphicon glyphicon-ban-circle"></i>',
             ],
-            'danger' => [
+            'bootstrap-danger' => [
                 'class' => 'alert-danger',
                 'icon' => '<i class="icon glyphicon glyphicon-ban-circle"></i>',
             ],
-            'success' => [
+            'bootstrap-success' => [
                 'class' => 'alert-success',
                 'icon' => '<i class="icon glyphicon glyphicon-ok"></i>',
             ],
-            'info' => [
+            'bootstrap-info' => [
                 'class' => 'alert-info',
                 'icon' => '<i class="icon glyphicon glyphicon-exclamation-sign"></i>',
             ],
-            'warning' => [
+            'bootstrap-warning' => [
                 'class' => 'alert-warning',
                 'icon' => '<i class="icon glyphicon glyphicon-warning-sign"></i>',
             ],
         ],
         'closeButton'=>[],
+]); ?>
+```
+
+SweetAlerts
+---
+
+1) Set the message in your action, for example:
+
+```php
+<?php  
+    Yii::$app->session->setFlash('sweeat-alert-success', 'This is the message');
+?>
+```
+
+2) Simply add widget to your page as follows:
+
+```php
+<?= \lesha724\Notification\widgets\SweetAlert::widget([
+        'alertTypes' => [
+            'sweet-alert-error' => [
+                //you can use all options from http://t4t5.github.io/sweetalert/
+                'type' => 'error',
+                'title' => 'Error!',
+                /* function use example:
+                 * function(isConfirm){
+                     if (isConfirm) {
+                       swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                     } else {
+                       swal("Cancelled", "Your imaginary file is safe :)", "error");
+                     }
+                   }
+                 */
+                
+                'function' => null
+            ],
+            'sweet-alert-success' => [
+                'type' => 'success',
+                'title' => 'Success!',
+                'function' => null
+            ],
+            'sweet-alert-info' => [
+                'type' => 'info',
+                'title' => 'Info!',
+                'function' => null
+            ],
+            'sweet-alert-warning' => [
+                'type' => 'warning',
+                'title' => 'Warning!',
+                'function' => null
+            ],
+        ],
 ]); ?>
 ```
