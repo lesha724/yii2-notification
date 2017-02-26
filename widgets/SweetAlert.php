@@ -74,6 +74,7 @@ class SweetAlert extends AlertsWidget
         $options = Json::encode($options);
 
         if(isset($this->alertTypes[$type]['function']) && !empty($this->alertTypes[$type]['function'])) {
+
             $function = new JsExpression($this->alertTypes[$type]['function']);
             $options.=','.$function;
         }
