@@ -7,17 +7,17 @@ class SweetAlertAssets extends \yii\web\AssetBundle
     /**
      * @var string the directory that contains the source asset files for this asset bundle.
      */
-    public $sourcePath = '@bower/sweetalert/src';
+    public $sourcePath = '@bower/sweetalert/';
     /**
      * @var array list of JavaScript files that this bundle contains.
      */
     public $js = [
-        'sweetalert.min.js',
+        'dist/sweetalert.min.js',
     ];
     /**
      * @var array list of CSS files that this bundle contains.
      */
     public $css = [
-        'sweetalert.css'
+        'dist/sweetalert.css'
     ];
 }
